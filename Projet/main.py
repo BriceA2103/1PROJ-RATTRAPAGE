@@ -124,6 +124,7 @@ class Plateau:
     def remove(self, pion1):
         pion1.joueur = 0
         pion1.image = pionNeutre
+        print("Tu n'as pas capturé")
 
     def move(self, pion1, pion2):
         pion2.joueur = pion1.joueur
@@ -188,7 +189,6 @@ class Plateau:
             return True, 2
         elif cnt2 == 0:
             return True, 1
-        print("possibilité pour noir de jouer", cnt1, "possibilité pour blanc de jouer", cnt2)
         return False
 
 def game():
